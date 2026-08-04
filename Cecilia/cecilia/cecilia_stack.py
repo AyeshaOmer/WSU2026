@@ -1,6 +1,7 @@
 from aws_cdk import (
     # Duration,
     Stack,
+    aws_lambda as lambda_,
     # aws_sqs as sqs,
 )
 from constructs import Construct
@@ -11,10 +12,11 @@ class CeciliaStack(Stack):
         super().__init__(scope, construct_id, **kwargs)
 
         fn = lambda_.Function(self, "MyFunction",
-            runtime=lambda_.Runtime.NODEJS_LATEST,
+            runtime=lambda_.Runtime.PYTHON_3_12,
             handler="index.handler",
             code=lambda_.Code.from_asset("./resources")
 )
+        fn.apply_removal_policy(RemovalPolicy.DESTROY)
         # The code that defines your stack goes here
 
         # example resource
