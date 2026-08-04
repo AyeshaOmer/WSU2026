@@ -3,11 +3,11 @@ import os
 
 import aws_cdk as cdk
 
-from 22079314.22079314_stack import 22079314Stack
+from cecilia.cecilia_stack import CeciliaStack
 
 
 app = cdk.App()
-22079314Stack(app, "22079314Stack",
+CeciliaStack(app, "CeciliaStack",
     # If you don't specify 'env', this stack will be environment-agnostic.
     # Account/Region-dependent features and context lookups will not work,
     # but a single synthesized template can be deployed anywhere.

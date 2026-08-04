@@ -5,7 +5,7 @@ from aws_cdk import (
 )
 from constructs import Construct
 
-class 22079314Stack(Stack):
+class CeciliaStack(Stack):
 
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
@@ -14,6 +14,6 @@ class 22079314Stack(Stack):
 
         # example resource
         # queue = sqs.Queue(
-        #     self, "22079314Queue",
+        #     self, "CeciliaQueue",
         #     visibility_timeout=Duration.seconds(300),
         # )
